@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="left flex center">
+            <div class="left-content flex flex-column h-center">
+                <h1 class="title">Validate your logins</h1>
+                <p class="app-info">A simple pure JavaScript form validation.</p>
+            </div>
+        </div>
+        <div class="right flex center">
+            <div class="right-content flex flex-column center">
+                <form id="form-validation">
+                    <div class="form-group flex-column">
+                        <label for="email">Email Address</label>
+                        <div class="email-info">
+                            You can use letters, numbers &amp; periods e.g john.doe@email.com
+                        </div>
+                        <input type="email" id="email" class="email">
+                        <div class="info"></div>
+                    </div>
+                    <div class="form-group flex-column">
+                        <label for="password">Password</label>
+                        <div class="password-info">
+                            <p class="password-checks flex validLength">Minimum 6 digits</p>
+                            <p class="password-checks flex hasCapital">At least 1 upper case letters A–Z</p>
+                            <p class="password-checks flex hasSmall">Atleast 1 Lower case letters a–z</p>
+                            <p class="password-checks flex hasNumber">Atleast 1 number 0–9</p>
+                            <p class="password-checks flex hasSpecial">Atleast 1 special symbol e.g. Rb@7X$£!</p>
+                        </div>
+                        <input type="password" id="password" class="password">
+                        <div class="info"></div>
+                    </div>
+                    <div class="form-group flex-column">
+                        <button class="submit-btn" disabled>Sign up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.6.0/dist/gsap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
